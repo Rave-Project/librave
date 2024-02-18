@@ -1,10 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
-void bruh() {
-    if ((random() % 2) == 1) {
-        printf("Shit\n");
-    }
+struct task_simply_struct {
+    pid_t pid;
+    char comm[200];
+};
 
-    return;
+
+
+int someData() {
+    return syscall(445);
 }
