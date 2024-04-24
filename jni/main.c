@@ -46,6 +46,6 @@ int gpu_getconf() {
     return max;
 }
 
-int adreno_freq(unsigned long freq, unsigned int *table, int flag) {
+unsigned long int adreno_freq(unsigned long freq, unsigned int *table, int flag) {
     return syscall(446, freq, table, flag);
 }
